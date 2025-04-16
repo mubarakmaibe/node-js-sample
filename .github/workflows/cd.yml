@@ -22,5 +22,6 @@ jobs:
           cd ~/node-js-sample || git clone https://github.com/mubarakmaibe/node-js-sample.git && cd node-js-sample
           git pull origin main
           npm install
-          pm2 restart all || pm2 start index.js --name node-app
+          pm2 delete node-app || true
+          pm2 start index.js --name node-app
 
